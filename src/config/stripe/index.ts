@@ -6,4 +6,3 @@ export const stripeConfig = {
   // Stripe options
   apiVersion: "2023-08-16" as any,
 }
-console.log("stripeConfig", stripeConfig)

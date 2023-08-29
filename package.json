@@ -6,12 +6,8 @@
     "build": "yarn run barrels && tsc --project tsconfig.compile.json",
     "barrels": "barrelsby --config .barrelsby.json",
     "start": "tsnd --inspect --exit-child --cls --ignore-watch node_modules --respawn --transpile-only src/index.ts",
-    "start:express": "ts-node --transpile-only src/raw.express.ts",
-    "start:koa": "ts-node --transpile-only src/raw.koa.ts",
     "start:prod": "cross-env NODE_ENV=production node dist/index.js",
-    "stripe:forward:tsed": "stripe listen --forward-to localhost:8083/rest/webhooks/callback",
-    "stripe:forward:express": "stripe listen --forward-to localhost:3006/webhook",
-    "stripe:forward:koa": "stripe listen --forward-to localhost:3007/webhook",
+    "stripe:forward": "stripe listen --forward-to localhost:8083/rest/webhooks/callback",
     "stripe:trigger": "stripe trigger payment_intent.succeeded"
   },
   "dependencies": {
